@@ -1,5 +1,7 @@
 # Zotero Nginx
 
+[![Docker Hub](https://img.shields.io/docker/v/gzurowski/zotero-nginx?label=Docker%20Hub)](https://hub.docker.com/r/gzurowski/zotero-nginx)
+
 A Docker image providing WebDAV access for Zotero, built on the official Nginx Alpine Linux image.
 
 ## Quick Start
