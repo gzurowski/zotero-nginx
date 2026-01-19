@@ -1,0 +1,6 @@
+services:
+  zotero:
+    build:
+      context: ./src
+    ports:
+      - "8888:80"
