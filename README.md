@@ -111,3 +111,7 @@ curl -u zotero:zotero -X DELETE http://localhost:8888/zotero/test.txt
 ```
 
 Uploaded files are stored in the `./data` directory.
+
+## Issues
+
+If you encounter any problems or have suggestions, please [open an issue](https://github.com/gzurowski/zotero-nginx/issues).
