@@ -2,6 +2,48 @@
 
 A Docker image providing WebDAV access for Zotero, built on the official Nginx Alpine Linux image.
 
+## Quick Start
+
+> **Important:** Replace `myuser` and `mysecretpassword` in the examples below with your own credentials.
+
+### Using Docker
+
+```sh
+docker run -d \
+  --name zotero-webdav \
+  -p 8080:80 \
+  -e ZOTERO_USER=myuser \
+  -e ZOTERO_PASS=mysecretpassword \
+  -v zotero-data:/var/lib/dav/data \
+  gzurowski/zotero-nginx
+```
+
+### Using Docker Compose
+
+Create a `docker-compose.yml`:
+
+```yaml
+services:
+  zotero:
+    image: gzurowski/zotero-nginx
+    ports:
+      - "8080:80"
+    environment:
+      - ZOTERO_USER=myuser
+      - ZOTERO_PASS=mysecretpassword
+    volumes:
+      - zotero-data:/var/lib/dav/data
+
+volumes:
+  zotero-data:
+```
+
+Then run:
+
+```sh
+docker compose up -d
+```
+
 ## Development
 
 Clone this repository:
