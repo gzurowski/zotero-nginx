@@ -4,6 +4,12 @@ A Docker image providing WebDAV access for Zotero, built on the official Nginx A
 
 ## Development
 
+Clone this repository:
+
+```sh
+git clone https://github.com/gzurowski/zotero-nginx.git
+```
+
 ### Build
 
 ```sh
