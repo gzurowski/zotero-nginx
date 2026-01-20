@@ -1,6 +1,6 @@
-# Zotero Nginx
+# Zotero DAV
 
-[![Docker Hub](https://img.shields.io/docker/v/gzurowski/zotero-nginx?label=Docker%20Hub)](https://hub.docker.com/r/gzurowski/zotero-nginx)
+[![Docker Hub](https://img.shields.io/docker/v/gzurowski/zotero-dav?label=Docker%20Hub)](https://hub.docker.com/r/gzurowski/zotero-dav)
 
 A Docker image providing WebDAV access for Zotero, built on the official Nginx Alpine Linux image.
 
@@ -17,7 +17,7 @@ docker run -d \
   -e ZOTERO_USER=myuser \
   -e ZOTERO_PASS=mysecretpassword \
   -v zotero-data:/var/lib/dav/data \
-  gzurowski/zotero-nginx
+  gzurowski/zotero-dav
 ```
 
 ### Using Docker Compose
@@ -27,7 +27,7 @@ Create a `docker-compose.yml`:
 ```yaml
 services:
   zotero:
-    image: gzurowski/zotero-nginx
+    image: gzurowski/zotero-dav
     ports:
       - "8080:80"
     environment:
@@ -74,7 +74,7 @@ docker compose up -d
 Clone this repository:
 
 ```sh
-git clone https://github.com/gzurowski/zotero-nginx.git
+git clone https://github.com/gzurowski/zotero-dav.git
 ```
 
 ### Build
@@ -114,4 +114,4 @@ Uploaded files are stored in the `./data` directory.
 
 ## Issues
 
-If you encounter any problems or have suggestions, please [open an issue](https://github.com/gzurowski/zotero-nginx/issues).
+If you encounter any problems or have suggestions, please [open an issue](https://github.com/gzurowski/zotero-dav/issues).
