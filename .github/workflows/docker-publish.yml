@@ -64,3 +64,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ env.IMAGE_NAME }}
           short-description: "Zotero WebDAV sync server powered by Nginx"
+          readme-filepath: ./README.md
