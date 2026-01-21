@@ -102,7 +102,8 @@ curl http://localhost:8888/health
 curl -u zotero:zotero -X PROPFIND http://localhost:8888/zotero/
 
 # Upload a test file
-echo "Hello Zotero!" | curl -u zotero:zotero -T - http://localhost:8888/zotero/test.txt
+echo "Hello Zotero!" > test.txt
+curl -u zotero:zotero -T test.txt http://localhost:8888/zotero/test.txt
 
 # Download the file
 curl -u zotero:zotero http://localhost:8888/zotero/test.txt
